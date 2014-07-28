@@ -1,0 +1,47 @@
+=head1 NAME
+
+	sign - OpenCA PKCS#7 Sign Tool
+
+=head1 SYNOPSIS
+
+	sign [-in file][-out file][-cert file][-keyfile file]
+	[-key passwd][-nd][-verbose]
+
+=head1 DESCRIPTION
+
+You can find two programs in this distro: sign and verify. The first signs
+given data, adds to the signature a time, the siger's certificate and, if
+wanted, the data (not encrypted).
+
+Signing tool syntax is as follows:
+
+usage: sign args
+
+ -in file        - Input file
+ -out file       - File where to write to
+ -cert file      - Certificate file
+ -keyfile file   - Sign key file
+ -key            - Password protecting the private key
+ -nd             - No detach signature
+ -verbose        - Verbose printing
+
+Jus one note on the -nd flag: when used the data is added to the PKCS7
+structure toghether with signature and other stuff. It is possible to
+retrieve such data using the corresponding verify tool.
+
+=head1 EXAMPLE
+
+	sign -in README -out README.sig -cert cert.pem -keyfile key.pem \
+		-key mypasswd -nd
+		
+=head1 AUTHOR
+
+Massimiliano Pala <madwolf@openca.org>
+
+=head1 SEE ALSO
+
+OpenCA::verify, OpenCA::OpenSSL, OpenCA::X509, OpenCA::CRL, OpenCA::REQ,
+OpenCA::Tools
+
+=cut
+

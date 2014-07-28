@@ -1,0 +1,37 @@
+OpenCA PKCS#7 Tool
+==================
+
+0. General Info
+===============
+
+You can find three programs in this distro: sign, verify, sv. The first signs
+given data, adds to the signature a time, the siger's certificate and, if
+wanted, the data (not encrypted). The verify tool simply verifies a given
+signature (and data).
+
+The last tool, sv, is a new tool allowing for singnature generation/verification
+(in fact is derived from the other two) and for signature transformation from
+detached to non-detached (data will be included in the signature itself). When
+usinf this tool parameters you have to pass are exactly the same as the ones
+reported below for the sign/verify part.
+
+1. Installation
+===============
+
+To install the tool simply do the following (to get some options just do
+'./configure --help' ):
+
+	$ ./configure
+	$ make clean
+	$ make
+
+then became root (to be sure having write privileges to dest directory) and
+type:
+
+	# make install
+
+===============================================================================
+Author : Massimiliano Pala (madwolf@openca.org)
+Document Release: 0.6                                     http://www.openca.org
+===============================================================================
+

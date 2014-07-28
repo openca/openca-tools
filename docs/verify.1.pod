@@ -1,0 +1,48 @@
+=head1 NAME
+
+	verify - PKCS#7 Signatures Verification Tool
+
+=head1 SYNOPSIS
+
+	verify [-signature file] [-out file] [-data file] [-cf file]
+	[-cd dir] [-print_data] [-verbose]
+
+=head1 DESCRIPTION
+
+	-signature file	Signature file
+	-out file	Output file
+	-data file	File containing signed data
+	-cf file	CA's certificate file
+	-cd certsdir	CAs' certificates directory
+	-print_data	Print Signed Data to outfile
+	-verbose	Verbose output
+
+=head1 NOTES
+
+The signature file is the file containing the PKCS7 structure to be
+verified. Now it is possible to verify only PEM formatted pkcs7, such
+files do have header and footer lines as follows:
+
+-----BEGIN PKCS7-----
+ASDADSSDASDASDa....
+...................
+....DSDSADADSADS==
+-----END PKCS7-----
+
+Providing the -cf file usually will fit for most applications, however if
+you have chained certificates you can use the -cd certsdir to specify the
+directory where CA certificates (and hashes values) are kept.
+
+=head1 EXAMPLE
+
+	./verify -signature README.sig -verbose -cf cacert.pem
+
+=head1 AUTHOR
+
+Massimiliano Pala <madwolf@openca.org>
+
+=head1 SEE ALSO
+
+openssl, OpenCA::OpenSSL, OpenCA::X509, OpenCA::REQ, OpenCA::CRL
+
+=cut

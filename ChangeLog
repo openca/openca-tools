@@ -1,0 +1,11 @@
+* Jan 16 2010 Massimiliano Pala <madwolf@openca.org>
+- Fixed missing support for STACK symbol in OpenSSL 1.0+
+- Fixed configure.in and libool files to support new automake/autoconf
+- Fixed support for correct package building (make pkgbuild)
+
+* May  3 2009 Massimiliano Pala <madwolf@openca.org>
+- Fixed visualization error (multiple recipients) in SCEP text view
+
+* Apr 10 2007 Massimiliano Pala <madwolf@openca.org>
+-First version of new packages into CVS repository on pki.openca.org
+

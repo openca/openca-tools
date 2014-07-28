@@ -1,0 +1,4 @@
+Mon Oct 2006 Massimiliano Pala <madwolf@openca.org>
+- New Package building for openca-tools
+- Fixed VERSION and PACKAGE_VERSION variables
+

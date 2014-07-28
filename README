@@ -1,0 +1,18 @@
+OpenCA Tools Package
+====================
+
+This package contains the prerequisites for installing OpenCA (0.9.3+).
+It contains the sign/verify utility as well as the scep utility.
+
+Please refer to README_SV and README_SCEP for detailed informations about
+the provided tools.
+
+For more information, go to our website:
+
+	http://www.openca.org/
+
+or subscribe the available mailing list(s).
+
+						Massimiliano Pala
+						OpenCA Project Manager
+
